@@ -4,10 +4,11 @@ class Employee {
         this.name = name;
         this.department = department;
     }
-};
 
-describe(); {
-    return `Employee: ${this.name} | Department: ${this.department}`;
+
+    describe() {
+        return `Employee: ${this.name} | Department: ${this.department}`;
+    }
 }
 
 //Creating Subclass
@@ -15,13 +16,12 @@ class Manager extends Employee {
     constructor(name, department, teamSize) {
         super(name, department);
         this.teamSize = teamSize;
-    }       
-};
+    }
 
-describe(); {
+describe() {
     return `Manager: ${this.name} | Department: ${this.department} | Team Size: ${this.teamSize}`;
 }
-
+}
 
 class Company {
     constructor() {
@@ -51,3 +51,18 @@ let manager3 = new Manager("Jessica Wilson", "Human Resources", 7);
 
 
 
+//Creating Company Class
+
+let myCompany = new Company();
+
+myCompany.addEmployee(emp1);
+myCompany.addEmployee(emp2);
+myCompany.addEmployee(emp3);
+myCompany.addEmployee(manager1);
+myCompany.addEmployee(manager2);
+myCompany.addEmployee(manager3);
+
+
+
+// Initiating Company object to list all employees
+myCompany.listEmployees();
