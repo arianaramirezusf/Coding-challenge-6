@@ -6,10 +6,48 @@ class Employee {
     }
 };
 
-describe() {
+describe(); {
     return `Employee: ${this.name} | Department: ${this.department}`;
-};
-
+}
 
 //Creating Subclass
+class Manager extends Employee {
+    constructor(name, department, teamSize) {
+        super(name, department);
+        this.teamSize = teamSize;
+    }       
+};
+
+describe(); {
+    return `Manager: ${this.name} | Department: ${this.department} | Team Size: ${this.teamSize}`;
+}
+
+
+class Company {
+    constructor() {
+        this.employees = [];
+    }
+
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+
+    listEmployees() {
+        this.employees.forEach(employee => {
+            console.log(employee.describe());
+        }); 
+    }   
+}
+
+//Creating Sample Employees
+let emp1 = new Employee("Sara Roberts", "Engineering");
+let emp2 = new Employee("John Torres", "Marketing");
+let emp3 = new Employee ("Charlie Williams", "Human Resources");
+
+//Creating Sample Manager
+let manager1 = new Manager("Emily Davis", "Engineering", 5);
+let manager2 = new Manager("Michael Brown", "Marketing", 3);
+let manager3 = new Manager("Jessica Wilson", "Human Resources", 7);
+
+
 
